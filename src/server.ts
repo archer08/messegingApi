@@ -16,6 +16,7 @@ app.post("/incoming-message", (req: any, res: any) => {
   const message = req.body.Body;
 
   // Forward the incoming message to your `MESSAGE_NUMBER`.
+  console.log(MAIN_NUMBER, MESSAGE_NUMBER);
   client.messages
     .create({
       body: `${sender}: ${message}`,
