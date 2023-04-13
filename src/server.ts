@@ -19,8 +19,8 @@ app.post("/incoming-message", (req: any, res: any) => {
   client.messages
     .create({
       body: `${sender}: ${message}`,
-      from: MAIN_NUMBER,
-      to: MESSAGE_NUMBER,
+      from: MESSAGE_NUMBER,
+      to: MAIN_NUMBER,
     })
     .then((message: any) => console.log(`Forwarded message: ${message.sid}`));
 });
