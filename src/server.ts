@@ -1,6 +1,5 @@
 // import { uuidv4 } from 'uuid';
 
-const client = require("twilio")(accountSid, authToken);
 const express = require("express");
 import * as dotenv from "dotenv";
 const app = express();
@@ -8,6 +7,7 @@ dotenv.config();
 app.use(express.json());
 const accountSid = process.env.accountSid;
 const authToken = process.env.authToken;
+const client = require("twilio")(accountSid, authToken);
 const MAIN_NUMBER = process.env.MAIN_NUMBER;
 const MESSAGE_NUMBER = process.env.MESSAGE_NUMBER;
 // Set up a Twilio webhook that will be called whenever a message is received on your `MAIN_NUMBER`.
