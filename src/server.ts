@@ -1,6 +1,6 @@
 // import { uuidv4 } from 'uuid';
-const accountSid = "ACd12ba5a0f7d9acc4c22321fe7dac274f";
-const authToken = "801131cd378eec5a7b7def5b9f481f13";
+const accountSid = "ACadccb3dff7859e66f12864d1102296f7";
+const authToken = "28ea06caed58bbba68644e69198454a8";
 const client = require("twilio")(accountSid, authToken);
 const express = require("express");
 import * as dotenv from "dotenv";
